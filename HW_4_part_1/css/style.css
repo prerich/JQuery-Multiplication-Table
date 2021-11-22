@@ -1,0 +1,101 @@
+/*
+    name: Jennifer Robles
+     email: Jennifer_Robles@student.uml.edi
+    date:11-14-20201
+    purpose: styles the pages' form, button, text for different
+    ocations, and multiplication table.
+*/
+
+
+body {
+    background-color: #588157;
+    color: #dad7cd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: #a3b18a;
+}
+h4 {
+    font-size: 1.25em;
+}
+
+form {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    border: 2px solid #344e41;
+    text-align: right;
+    padding: 15px;
+    padding-left: 0px;
+    height: fit-content;
+
+}
+
+input[type=text] {
+    padding: 5px;
+    margin: 10px;
+    width: 30%;
+}
+
+
+button {
+    padding: 8px;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+    background-color: #344e41;
+    color: #dad7cd;
+    box-shadow: #dad7cd;
+}
+
+
+
+h3{
+    padding: 10px;
+    text-decoration: underline;
+}
+
+
+/*style multiplication table*/
+table th, td{
+    padding: 4px;
+    border: 2px solid #a3b18a;
+    font-size: 13px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* style the ranges the user specified */
+table th{
+    background-color: #344e41;;
+}
+
+/* alternating colors for a cell in the table */
+table tr:nth-child(odd) td:nth-child(odd),
+table tr:nth-child(even) td:nth-child(even){
+    background-color: #a3b18a;
+    color: #344e41;
+   
+}
+/*
+table tr:nth-child(even) td:nth-child(even){
+    background-color: #a3b18a;
+    color: #344e41;
+}*/
+
+
+
+/* adds scrollbar when its overflow to table*/
+#containerTable{
+    padding: 10px;
+    margin: 10px;
+    overflow: auto;
+    max-height: 600px;
+    max-width: 80%;
+    
+}

@@ -1,0 +1,161 @@
+/*
+    name: Jennifer Robles
+     email: Jennifer_Robles@student.uml.edi
+    date:11-14-20201
+    purpose: styles the pages' form, button, text for different
+    ocations, and multiplication table. Custumized some of the UI
+            defaults to better match my theme
+*/
+
+
+body {
+    background-color: #588157;
+    color: #dad7cd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: #a3b18a;
+}
+h4 {
+    font-size: 1.25em;
+}
+
+form {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    border: 2px solid #344e41;
+    text-align: right;
+    padding: 15px;
+    padding-left: 0px;
+    height: fit-content;
+
+}
+
+input[type=text] {
+    padding: 5px;
+    margin: 10px;
+    width: 30%;
+}
+
+
+button {
+    padding: 8px;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+    background-color: #344e41;
+    color: #dad7cd;
+    box-shadow: #dad7cd;
+}
+
+
+
+h3{
+    padding: 10px;
+    text-decoration: underline;
+}
+
+
+/*style multiplication table*/
+table th, td{
+    padding: 4px;
+    border: 2px solid #a3b18a;
+    font-size: 13px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* style the ranges the user specified */
+table th{
+    background-color: #344e41;
+}
+
+/* alternating colors for a cell in the table */
+table tr:nth-child(odd) td:nth-child(odd),
+table tr:nth-child(even) td:nth-child(even){
+    background-color: #a3b18a;
+    color: #344e41;
+   
+}
+/*
+table tr:nth-child(even) td:nth-child(even){
+    background-color: #a3b18a;
+    color: #344e41;
+}*/
+
+
+
+/* adds scrollbar when its overflow to table*/
+#containerTable{
+    padding: 10px;
+    margin: 10px;
+    overflow: auto;
+    max-height: 500px;
+    max-width: 80%;
+    
+}
+
+/* added more space to the bottom of the tab area */
+#containerTabs{
+    padding-bottom: 40px;
+}
+
+
+/* style the save tab button */
+.removeTabsButton{
+    width: 150px;
+    color: #fff;
+    background: #459e00;
+
+    
+}
+
+/* changes the label*/
+.ui-slider-label {
+    color: #dad7cd;
+}
+
+
+/* changes the lines in slider*/
+.ui-slider-pips .ui-slider-line  {
+    background-color: #dad7cd;
+}
+
+
+/* here to the end i override some defaults of the tabs content
+    area like its table theme and alt colors*/
+
+.ui-widget-content table th, .ui-widget-content td{
+    padding: 4px;
+    border: 2px solid #a3b18a;
+    font-size: 13px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.ui-widget-content table th{
+    background-color: #344e41;
+    color: #fff;
+}
+
+
+/* altenatin colors in the table copy inside the tab conent */
+.ui-widget-content table tr:nth-child(odd) td:nth-child(odd),
+.ui-widget-content table tr:nth-child(even) td:nth-child(even){
+    background-color: #a3b18a;
+    color: #fff;
+   
+}
+
+.ui-widget-content table tr:nth-child(odd) td:nth-child(even),
+.ui-widget-content table tr:nth-child(even) td:nth-child(odd){
+    color: #344e41;
+
+}

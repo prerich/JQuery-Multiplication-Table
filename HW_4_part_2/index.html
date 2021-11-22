@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!---
+    name: Jennifer Robles
+    email: Jennifer_Robles@student.uml.edi
+    date: 11/17/21
+    purpose: Creates a form with 4 input values for user
+           to enter to fill out the parameters of a multupication
+           table. Miniumum Column is the smallest value for top
+           Maximum Column is the greatest number to go up to by 1's for top
+           and columns determines the width of the table
+           Miniumun Row is the smallest number for the side bara
+           Maxiumum Row determines the height of multpication table
+           Addition: included a slider thats binded to form input
+                    and a tab feauture to save mutliple tables.
+-->
+<html lang="en">
+<head>
+    <title>Multiplication Table Generator</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href = "https://code.jquery.com/ui/1.11.4/themes/south-street/jquery-ui.css" rel = "stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery-ui-Slider-Pips/1.11.4/jquery-ui-slider-pips.css">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- CDNs for jquery plugs in and my own custumization of validations-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/additional-methods.min.js"></script>
+
+
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+    <!--used this resource to add lines on scale and label http://simeydotme.github.io/jQuery-ui-Slider-Pips/-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-ui-Slider-Pips/1.11.4/jquery-ui-slider-pips.min.js"></script>
+
+</head>
+<body>
+
+    <h1>Multiplication Table Generator</h1>
+
+    <!--Form and display table here -->
+    <div class="container-fluid">
+        <div class="row">
+            <!--Form asking for 4 values from user to create table-->
+            <form id="form" class=" col-md-10 col-lg-4 col-sm-10 form-group" action="">
+                <h4>Please enter an Integer between -50 to 50</h4>
+                <label class="form-group" for="minCol">Minimum Column Value:</label>
+                <input class="form-group" type="text" id="minCol" name="minCol"><br>
+                <div class="slider" id="minCol_slider"></div>
+
+                <label class="form-group"for="maxCol">Maximum Column Value:</label>
+                <input class="form-group"type="text" id="maxCol" name="maxCol" ><br>
+                <div id = "maxCol_slider"></div>
+
+                <label class="form-group"for="minRow">Minimum Row Value:</label>
+                <input class="form-group"type="text" id="minRow" name="minRow"><br>
+                <div class="slider" id = "minRow_slider"></div>
+
+                <label class="form-group"for="maxRow">Maximum Row Value:</label>
+                <input class="form-group"type="text" id="maxRow" name="maxRow"><br>
+                <div id = "maxRow_slider"></div>
+
+
+                <!--Used a button instead of a input Submit type button Note no longer needed for hw4-->
+                <!--<button class="form-group"type="button" onclick="genTable()" href="index.html" >Submit</button>-->
+
+                <button class="form-group"type="button" onclick="saveTab()"> Save</button>
+            </form> 
+
+            <!-- where table will be placed after function is called on -->
+            <div class="col-sm-10 col-md-6 col-lg-4" id="containerTable"></div>
+        </div> <!--end of row-->
+
+        <!--tab feature-->
+        <div class="row">
+            <div id="containerTabs">
+                <button class="removeTabsButton" onclick="removeTabs()">Remove Tabs</button>
+                <ul id="listTabs">
+                
+                </ul>
+                <!--tabs div/content will fall under here-->
+            </div>
+
+        </div>
+    </div>
+
+    <!--my js files-->
+    <script src="js/generator.js"></script>
+    <script src="js/form_validator.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/tabs.js"></script>
+    
+
+  
+
+
+</body>
+</html>
+
